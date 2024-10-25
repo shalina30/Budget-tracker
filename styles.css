@@ -1,0 +1,79 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h2.heading {
+  color: #f04a58;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, select {
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #f04a58;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #e03a48;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Table Styles */
+.summary-table {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-table th, .summary-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.summary-table th {
+  background-color: #f04a58;
+  color: white;
+}
+
+/* Chart Styles */
+canvas {
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}

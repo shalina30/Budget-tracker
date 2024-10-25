@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="page active">
+        <h2 class="heading">Login to Your Budget Tracker</h2>
+        <div class="form-container">
+            <input type="text" id="username" placeholder="Enter Username">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <!-- Income and Expenses Page -->
+    <div id="incomePage" class="page">
+        <h2 class="heading">Income and Expenses for <span id="userDisplay"></span></h2>
+        <div class="form-container">
+            <input type="text" id="month" placeholder="Enter Month">
+            <input type="number" id="income" placeholder="Enter Income">
+            <h3>Expenses:</h3>
+            <input type="number" id="grocery" placeholder="Grocery">
+            <input type="number" id="rent" placeholder="Rent">
+            <input type="number" id="laundry" placeholder="Laundry">
+            <input type="number" id="eb" placeholder="Electric Bill">
+            <input type="number" id="tuition" placeholder="Tuition Fee">
+            <input type="number" id="emi" placeholder="EMI">
+            <input type="number" id="entertainment" placeholder="Entertainment">
+            <input type="number" id="homeLoan" placeholder="Home Loan">
+            <button onclick="calculateExpenses()">Next</button>
+        </div>
+    </div>
+
+    <!-- Savings Scheme Page -->
+    <div id="savingsPage" class="page">
+        <h2 class="heading">Enter Savings Scheme</h2>
+        <div class="form-container">
+            <select id="savingsScheme">
+                <option value="mutual">Mutual Funds</option>
+                <option value="insurance">Life Insurance</option>
+                <option value="bitcoin">Bitcoin Investment</option>
+                <option value="medical">Medical Insurance</option>
+            </select>
+            <input type="number" id="savingsAmount" placeholder="Savings Amount">
+            <button onclick="calculateSavings()">Next</button>
+        </div>
+    </div>
+
+    <!-- Summary Page -->
+    <div id="summaryPage" class="page">
+        <h2 class="heading">Summary for <span id="summaryMonth"></span></h2>
+        <table class="summary-table">
+            <tr>
+                <th>Item</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>Total Income</td>
+                <td id="summaryIncome"></td>
+            </tr>
+            <tr>
+                <td>Total Expenses</td>
+                <td id="summaryExpenses"></td>
+            </tr>
+            <tr>
+                <td>Savings Scheme</td>
+                <td id="summarySavings"></td>
+            </tr>
+            <tr>
+                <td>Total Savings</td>
+                <td id="summaryTotalSavings"></td>
+            </tr>
+        </table>
+        <button onclick="showGraph()">View Analysis</button>
+    </div>
+
+    <!-- Analysis Page -->
+    <div id="analysisPage" class="page">
+        <h2 class="heading">Savings Analysis for <span id="analysisUser"></span></h2>
+        <canvas id="savingsChart"></canvas>
+        <button onclick="restart()">Restart</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
